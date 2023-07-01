@@ -1,7 +1,7 @@
 import { IClothingPayload } from "src/interfaces/IClothingPayload";
 import { Get, Route, Tags, Post, Delete, Body, Path } from "tsoa";
 import { Clothing } from "../entity/clothing";
-import { getClothing, addClothing, removeClothing } from "src/repository/clothingRepository";
+import { getClothing, addClothing, removeClothing } from "../repository/clothingRepository";
 
 @Route("clothing")
 @Tags("Clothing")

@@ -13,7 +13,7 @@ export const addClothing = async (payload: IClothingPayload) :Promise<Clothing> 
     return clothingRepository.save({
         ...clothing,
         ...payload
-    })
+    });
 }
 
 export const removeClothing = async (id: number) :Promise<Clothing | null> => {
@@ -21,9 +21,9 @@ export const removeClothing = async (id: number) :Promise<Clothing | null> => {
 
     const clothingToRemove = await clothingRepository.findOneBy({
         id: id,
-    })
+    });
 
-    if (!clothingToRemove) return null
+    if (!clothingToRemove) return null;
  
     return clothingRepository.remove(clothingToRemove);
 }
